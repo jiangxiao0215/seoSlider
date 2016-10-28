@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {padding: 0px;margin: 0px;list-style: none;}
+    .listSymbol li{
+        background-color: white;
+    }
+    .listSymbol .on {
+        background-color: blue;
+    }
+    </style>
+    <script src="jquery.js"></script>
+    <script src="slide.js"></script>
+</head>
+<body>
+    <div class="seoSlider">
+        <ul class="seoContainer">
+            <li><img src="image/lunbo1.jpg" alt="" /></li>
+            <li><img src="image/lunbo2.jpg" alt="" /></li>
+            <li><img src="image/lunbo3.jpg" alt="" /></li>
+            <li><img src="image/lunbo4.jpg" alt="" /></li>
+        </ul>
+    </div>
+</body>
+<script>
+    $('.seoSlider').seo({
+        'slideTime':2000,
+        'seoSliderWidth':'500px',
+        'seoSliderHeight':'400px'
+    })
+</script>
+</html>
