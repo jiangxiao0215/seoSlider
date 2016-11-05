@@ -15,6 +15,7 @@
                 seoSlider.slideMove(args);
                 seoSlider.slideMoveLR(args);
                 seoSlider.argsDe(args);
+                seoSlider.hoverPoint(args)
 			})();
 		},
         // 自定义变量参数
@@ -138,6 +139,21 @@
                 } else {
                     $(".seoSlider .listSymbol li").eq(seoSlider.i).addClass("on").siblings().removeClass("on");
                 }
+            })();
+        },
+        // 滑入圆点事件
+        hoverPoint:function(args){
+            return (function(){
+                $(".seoSlider .listSymbol li").hover(function() {
+
+                    var index = $(this).index(); //获取当前索引值
+                    seoSlider.i = index;
+                    $(".seoSlider .seoContainer").stop().animate({
+                        left: -index * parseInt(args.seoSliderWidth)
+                    }, 500);
+                    $(this).addClass("on").siblings().removeClass("on");
+                });
+
             })();
         },
         // 左右滑动按钮
